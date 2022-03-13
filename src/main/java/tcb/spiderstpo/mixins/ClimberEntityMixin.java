@@ -846,13 +846,13 @@ public abstract class ClimberEntityMixin extends PathfinderMob implements IClimb
 
             FluidState fluidState = this.level.getFluidState(this.blockPosition());
 
-            if (!this.canClimbInWater && this.isInWater() && this.isAffectedByFluids() && !this.canStandOnFluid(fluidState.getType())) {
+            if (!this.canClimbInWater && this.isInWater() && this.isAffectedByFluids() && !this.canStandOnFluid(fluidState)) {
                 this.isClimbingDisabled = true;
 
                 if (canTravel) {
                     return false;
                 }
-            } else if (!this.canClimbInLava && this.isInLava() && this.isAffectedByFluids() && !this.canStandOnFluid(fluidState.getType())) {
+            } else if (!this.canClimbInLava && this.isInLava() && this.isAffectedByFluids() && !this.canStandOnFluid(fluidState)) {
                 this.isClimbingDisabled = true;
 
                 if (canTravel) {
