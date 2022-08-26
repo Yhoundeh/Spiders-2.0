@@ -12,7 +12,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -27,6 +26,7 @@ jobs:
 
     - name: Make gradlew executable
       run: chmod +x ./gradlew
+      
     - name: Build with Gradle
       uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
       with:
@@ -39,4 +39,4 @@ jobs:
       with:
         arguments: publish
       env:
-        TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        TOKEN: ${{secrets.GITHUB_TOKEN}}
