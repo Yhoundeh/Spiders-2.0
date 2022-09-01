@@ -42,7 +42,7 @@ jobs:
       with:
         arguments: publish
       env:
-        TOKEN: ${{secrets.GITHUB_TOKEN}}
+        TOKEN: ${{secrets.Spiders}}
         
     - name: Upload build reports
       uses: actions/upload-artifact@v3
